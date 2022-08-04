@@ -1,9 +1,28 @@
 
-# Summer Project
+# Attendance System Using Facial Recognition 
 
-Topics can be found at
 
-[Topics](https://docs.google.com/document/d/1UtCwhDINVdLW4tc6K0FCcIdqdB_o1VOiBwya07N-QRc/edit)
+
+## Tech Stack
+
+**Libraries:** 
+- `face_recognition`
+- `datetime`
+- `csv` 
+- `numpy`
+- `os`
+
+**Languages:** Python
+
+
+## Features
+
+- Recognizes faces of students, and verifies them with the stored set of images.
+
+- Attendace is stored in a CSV file, the time of being present is also logged.
+
+
+
 
 ## Authors
 
