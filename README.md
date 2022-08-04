@@ -17,7 +17,7 @@
 
 ## Features
 
-- Recognizes faces of students, and verifies them with the stored set of images.
+- Recognizes faces of students, and verifies them against the stored set of images.
 
 - Attendace is stored in a CSV file, the time of being present is also logged.
 
