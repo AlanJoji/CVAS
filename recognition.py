@@ -30,7 +30,6 @@ while True :
 
     if s:
         face_locations = face_recognition.face_locations(rgb_small_frame)
-        print(face_locations)
         face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
         face_names = []
 
@@ -52,9 +51,6 @@ while True :
                     current_time = recog_time.curr_time()
                     writer.writerow([name, current_time])
     
-    
-
-       
 
         if(len(face_locations)!=0):
             face_loc = face_locations[0]
