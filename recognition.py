@@ -5,6 +5,7 @@ import csv
 import recognition_image_load as recog_img_load
 import recognition_time as recog_time
 
+
 known_face_names, known_face_encodings = recog_img_load.img_load()
  
 students = known_face_names.copy()
@@ -23,6 +24,7 @@ writer = csv.writer(file)
 
 video_capture = cv.VideoCapture(0)
 
+
 while True :
     _, frame = video_capture.read()
     small_frame = cv.resize(frame, (0, 0), fx = 0.25, fy = 0.25)
@@ -30,6 +32,7 @@ while True :
 
     if s:
         face_locations = face_recognition.face_locations(rgb_small_frame)
+        #print(face_locations)
         face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
         face_names = []
 
@@ -50,10 +53,23 @@ while True :
                     students.remove(name)
                     current_time = recog_time.curr_time()
                     writer.writerow([name, current_time])
+    
+    
+    
+    
+        if(len(face_locations)!=0):
+            face_loc = face_locations[0]
+            x1,y1,x2,y2 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
+            x1,y1,x2,y2 = 4*x1, 4*y1, 4*x2, 4*y2
 
+            print(x1,y1,x2,y2)
 
+            cv.rectangle(frame,(y2,x1),(y1,x2),(0,255,0),thickness = 2)
+            cv.putText(frame, str(name), (y2,x1-10), cv.FONT_HERSHEY_COMPLEX, 1, (255,255,255), thickness = 2)
+        
     cv.imshow("Attendance System", frame)
 
+    
     if (cv.waitKey(1) & 0xFF == ord('q')) :
         break
 
