@@ -52,7 +52,10 @@ while True :
                 if (name in students) :
                     students.remove(name)
                     current_time = recog_time.curr_time()
-                    writer.writerow([name, current_time])
+                    name = name.split('_')
+                    fname = name[0]
+                    lname = name[1]
+                    writer.writerow([fname + ' ' + lname, current_time])
     
     
     
@@ -65,7 +68,7 @@ while True :
             print(x1,y1,x2,y2)
 
             cv.rectangle(frame,(y2,x1),(y1,x2),(0,255,0),thickness = 2)
-            cv.putText(frame, str(name), (y2,x1-10), cv.FONT_HERSHEY_COMPLEX, 1, (255,255,255), thickness = 2)
+            cv.putText(frame, str(name).upper(), (y2,x1-10), cv.FONT_HERSHEY_COMPLEX, 1, (255,255,255), thickness = 2)
         
     cv.imshow("Attendance System", frame)
 
