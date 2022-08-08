@@ -57,9 +57,6 @@ while True :
                     lname = name[1]
                     writer.writerow([fname + ' ' + lname, current_time])
     
-    
-    
-    
         if(len(face_locations)!=0):
             face_loc = face_locations[0]
             x1,y1,x2,y2 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
