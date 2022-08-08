@@ -50,7 +50,7 @@ while True :
 
                     recog_csv.write_value(file_name, full_name, current_time)
 
-        if(len(face_locations) != 0):
+        if(len(face_locations)!=0):
             face_loc = face_locations[0]
             x1,y1,x2,y2 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
             x1,y1,x2,y2 = 4*x1, 4*y1, 4*x2, 4*y2
