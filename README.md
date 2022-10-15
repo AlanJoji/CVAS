@@ -3,16 +3,13 @@
 
 
 
-## Tech Stack
+## Features
 
-**Libraries:** 
-- `face_recognition`
-- `datetime`
-- `csv` 
-- `numpy`
-- `os`
+- Recognizes faces of students, and verifies them with the stored set of images.
 
-**Languages:** Python
+- Attendace is stored in a CSV file, the time of being present is also logged.
+
+
 
 
 ## Screenshots
@@ -26,13 +23,16 @@ Attendence being logged
 ![App Screenshot](https://github.com/AlanJoji/CVAS/blob/main/image/csv_file_vscode.PNG)
 
 
-## Features
+## Tech Stack
 
-- Recognizes faces of students, and verifies them with the stored set of images.
+**Libraries:** 
+- `face_recognition`
+- `datetime`
+- `csv` 
+- `numpy`
+- `os`
 
-- Attendace is stored in a CSV file, the time of being present is also logged.
-
-
+**Languages:** Python
 
 
 ## Run Locally
