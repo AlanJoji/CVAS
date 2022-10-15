@@ -18,9 +18,11 @@
 ## Screenshots
 
 Facial recognition in action
+
 ![App Screenshot](https://github.com/AlanJoji/CVAS/blob/main/image/recognition_in_action.PNG)
 
 Attendence being logged
+
 ![App Screenshot](https://github.com/AlanJoji/CVAS/blob/main/image/csv_file_vscode.PNG)
 
 
